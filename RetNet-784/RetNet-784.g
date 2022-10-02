@@ -1,4 +1,4 @@
-float dt = 0.00005 // simulation time step in sec
+float dt = $simulationTimeStepInSec$ // simulation time step in sec i.e 0.00005
 setclock  0  {dt}  // set the simulation clock
 
 int array_minx =  1     // najmniejszy indeks x
