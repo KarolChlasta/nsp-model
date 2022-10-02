@@ -8,7 +8,7 @@ git pull --recurse-submodules
 cd parent directore in repo
 git submodule update --init;
 cd submodule-directory;
-git pull;
+git pull --recurse-submodules;
 cd ..;
 git add submodule-directory;
 now you can git commit and git push
