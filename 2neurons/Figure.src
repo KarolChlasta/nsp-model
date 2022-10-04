@@ -1,0 +1,10 @@
+plot [0:0.3] [-0.1:0.035] "CellA-at1.potential" using 1:2 with lines, "CellB-at2.potential" using 1:2 with lines
+
+plot [0:0.3] [-0.1:0.035] "CellA-at1.potential" using 1:2 with lines t "Cell A V_{m}", "CellB-at2.potential" using 1:2 with lines t "Cell B V_{m}"
+
+plot [0:0.3] [-0.1:0.035] "CellA-at1.potential" using 1:2 with lines t "Neuron A V_{m} on RPi Node 1", "CellB-at2.potential" using 1:2 with lines t "Neuron B V_{m} on RPi Node 2"
+"Potencjał błon komórkowych neuronów A i B w pierwszych 300 ms symulacji."
+
+set xlabel "t [s]"
+set ylabel "V_{m} [V]"
+plot [0:0.3] [-0.1:0.035] "CellA-at1.potential" using 1:2 with lines t "Neuron A V_{m} on RPi Node 1", "CellB-at2.potential" using 1:2 with lines t "Neuron B V_{m} on RPi Node 2"
