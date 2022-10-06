@@ -35,7 +35,7 @@ int i,j
 
     create spikehistory {net}-history
 
-    setfield ^ filename {filename}.spike append 0 ident_toggle 1
+    setfield ^ filename {filename}.dat append 0 ident_toggle 1
 
     for (i=1; i<={nx}; i={i+1})
         for (j=1; j<={ny}; j={j+1})
@@ -45,7 +45,7 @@ int i,j
         end
     end
 
-echo {net} spike activity saved to file {filename}.spike
+echo {net} spike activity saved to file {filename}.dat
 end
 
 function make_circuit_3d(protocell, net, nx, ny, nz)
@@ -72,7 +72,7 @@ int i,j,k
 
     create spikehistory {net}-history
 
-    setfield ^ filename {filename}.spike append 0 ident_toggle 1
+    setfield ^ filename {filename}.dat append 0 ident_toggle 1
 
     for (i=1; i<={nx}; i={i+1})
         for (j=1; j<={ny}; j={j+1})
@@ -84,5 +84,5 @@ int i,j,k
         end
     end
 
-echo {net} spike activity saved to file {filename}.spike
+echo {net} spike activity saved to file {filename}.dat
 end
