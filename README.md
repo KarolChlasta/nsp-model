@@ -5,10 +5,12 @@ Models used in Neural Simulation Pipeline
 git pull --recurse-submodules
 # how to update the repo with submodule
 1) to refresh the submodules in nsp-code, from the parent directory run:
-cd parent directore in repo
-git submodule update --init;
-cd submodule-directory;
-git pull --recurse-submodules;
-cd ..;
-git add submodule-directory;
-now you can git commit and git push
+git fetch
+git status
+git pull
+cd ..
+git status
+git commit -m "update submodule 1"
+git add nsp-model
+git commit -m "update submodule 1"
+git push
