@@ -97,8 +97,9 @@ make_synapse /input /retina_net_3_1/dend/Ex_channel 2 0
 make_synapse /input /retina_net_2_1/dend/Ex_channel 2 0
 
 step 1 -time
-
+(
 getstat -time -step -memory
 showstat
 showstat -element
 showstat -process
+) > RetNet40.sts

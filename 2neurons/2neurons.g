@@ -58,4 +58,11 @@ reset
 step 20 -time
 paroff
 
+(
+getstat -time -step -memory
+showstat
+showstat -element
+showstat -process
+) > 2neurons.sts
+
 exit
