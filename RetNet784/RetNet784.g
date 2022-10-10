@@ -204,9 +204,8 @@ make_synapse /input /retina_net_21_24/dend/Ex_channel 2 0
 make_synapse /input /retina_net_21_25/dend/Ex_channel 2 0
 
 step 1 -time
-(
-getstat -time -step -memory
-showstat
-showstat -element
-showstat -process
-) > RetNet784.sts
+echo "statistics" > RetNet784.sts
+getstat -time -step -memory >> RetNet784.sts
+showstat >> RetNet784.sts
+showstat -element >> RetNet784.sts
+showstat -process >> RetNet784.sts

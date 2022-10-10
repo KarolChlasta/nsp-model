@@ -58,11 +58,11 @@ reset
 step 20 -time
 paroff
 
-(
-getstat -time -step -memory
-showstat
-showstat -element
-showstat -process
-) > 2neurons.sts
+RetNet40
+echo "statistics" > 2neurons.sts
+getstat -time -step -memory >> 2neurons.sts
+showstat >> 2neurons.sts
+showstat -element >> 2neurons.sts
+showstat -process >> 2neurons.sts
 
 exit
