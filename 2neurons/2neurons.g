@@ -32,11 +32,11 @@ barrier
 
 if ( {mynode}==1 )
   create spikehistory net-history
-  setfield ^ filename CellA-at1.spike append 0 ident_toggle 1
+  setfield ^ filename CellA-at1-spike.dat append 0 ident_toggle 1
   addmsg /CellA/soma/spike net-history SPIKESAVE
 
   create asc_file /soma_potential
-  setfield /soma_potential filename CellA-at1.potential append 0
+  setfield /soma_potential filename CellA-at1-potential.dat append 0
   addmsg /CellA/soma /soma_potential SAVE Vm
 end
 
@@ -44,11 +44,11 @@ barrier
 
 if ( {mynode}==2 )
   create spikehistory net-history
-  setfield ^ filename CellB-at2.spike append 0 ident_toggle 1
+  setfield ^ filename CellB-at2-spike.dat append 0 ident_toggle 1
   addmsg /CellB/soma/spike net-history SPIKESAVE
 
   create asc_file /soma_potential
-  setfield /soma_potential filename CellB-at2.potential append 0
+  setfield /soma_potential filename CellB-at2-potential.dat append 0
   addmsg /CellB/soma /soma_potential SAVE Vm
 end
 
