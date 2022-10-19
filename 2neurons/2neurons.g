@@ -55,7 +55,7 @@ end
 barrier
 
 reset
-step 20 -time
+step $simulationTime$ -time
 paroff
 
 echo "statistics" > 2neurons.sts

@@ -203,7 +203,7 @@ make_synapse /input /retina_net_21_23/dend/Ex_channel 2 0
 make_synapse /input /retina_net_21_24/dend/Ex_channel 2 0
 make_synapse /input /retina_net_21_25/dend/Ex_channel 2 0
 
-step 1 -time
+step $simulationTime$ -time
 echo "statistics" > RetNet784.sts
 getstat -time -step -memory >> RetNet784.sts
 showstat >> RetNet784.sts
