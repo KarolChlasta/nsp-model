@@ -1,3 +1,19 @@
+// Neural Simulation Pipeline
+//
+// Parameters:
+// - Required
+// $modName$ default RetNet40
+// $simulationTime$ default 1
+// $simulationTimeStepInSec$ default 0.00005
+// $columnDepth$ default 25 (1000 neurons)
+// $synapticProbability$ default 0.01
+// $modName$ default RetNet40
+// $retX$ default 5
+// $retY$ default 8
+// - Optional
+// $parallelMode
+// $numNodes
+
 float dt = $simulationTimeStepInSec$ // simulation time step in sec
 setclock  0  {dt}  // set the simulation clock
 
@@ -16,24 +32,22 @@ readcell cell.p /cell
 
 randseed
 
-make_circuit_2d /cell /retina_net 5 8
-make_circuit_2d_output /retina_net 5 8 RetNet40-0-retina
+make_circuit_2d /cell /retina_net $retX$ $retY$
+make_circuit_2d_output /retina_net $retX$ $retY$ $modName$-0-retina
 
-make_circuit_3d /cell /column_net_1 5 8 25
-make_circuit_3d_output /column_net_1 5 8 25 RetNet40-0-column
+make_circuit_3d /cell /column_net_1 $retX$ $retY$ $columnDepth$
+make_circuit_3d_output /column_net_1 $retX$ $retY$ $columnDepth$ $modName$-0-column
 
 int i1,j1,k1,i2,j2,k2,ri,rj
 
-float probability = 0.01
+for (i1=1; i1<=$retX$; i1={i1+1})
+ for (j1=1; j1<=$retY$; j1={j1+1})
+  for (k1=1; k1<=$columnDepth$; k1={k1+1})
+   for (i2=1; i2<=$retX$; i2={i2+1})
+     for (j2=1; j2<=$retY$; j2={j2+1})
+       for (k2=1; k2<=$columnDepth$; k2={k2+1})
 
-for (i1=1; i1<=5; i1={i1+1})
- for (j1=1; j1<=8; j1={j1+1})
-  for (k1=1; k1<=25; k1={k1+1})
-   for (i2=1; i2<=5; i2={i2+1})
-     for (j2=1; j2<=8; j2={j2+1})
-       for (k2=1; k2<=25; k2={k2+1})
-
-       if ( {rand 0 1} < {probability} )
+       if ( {rand 0 1} < {$synapticProbability$} )
         make_synapse /column_net_1_{i1}_{j1}_{k1}/soma/spike \
                      /column_net_1_{i2}_{j2}_{k2}/dend/Ex_channel 3.8 0
        end
@@ -45,16 +59,16 @@ for (i1=1; i1<=5; i1={i1+1})
  end
 end
 
-for (i1=1; i1<=5; i1={i1+1})
- for (j1=1; j1<=8; j1={j1+1})
-  for (k1=1; k1<=25; k1={k1+1})
+for (i1=1; i1<=$retX$; i1={i1+1})
+ for (j1=1; j1<=$retY$; j1={j1+1})
+  for (k1=1; k1<=$columnDepth$; k1={k1+1})
 
   // connecting retina to the column 1
 
-       for (ri=1; ri<=5; ri={ri+1})
-        for (rj=1; rj<=8; rj={rj+1})
+       for (ri=1; ri<=$retX$; ri={ri+1})
+        for (rj=1; rj<=$retY$; rj={rj+1})
 
-         if ( {rand 0 1} < {probability} )
+         if ( {rand 0 1} < {$synapticProbability$} )
           make_synapse /retina_net_{ri}_{rj}/soma/spike \
                        /column_net_1_{i1}_{j1}_{k1}/dend/Ex_channel 3.8 0
          end
@@ -98,8 +112,8 @@ make_synapse /input /retina_net_2_1/dend/Ex_channel 2 0
 
 step $simulationTime$ -time
 
-echo "statistics" > RetNet40.sts
-getstat -time -step -memory >> RetNet40.sts
-showstat >> RetNet40.sts
-showstat -element >> RetNet40.sts
-showstat -process >> RetNet40.sts
+echo "statistics" > $modName$.sts
+getstat -time -step -memory >> $modName$.sts
+showstat >> $modName$.sts
+showstat -element >> $modName$.sts
+showstat -process >> $modName$.sts
