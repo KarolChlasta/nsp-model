@@ -13,16 +13,27 @@ git submodule add https://github.com/KarolChlasta/genesis-2.4.git
 git pull --recurse-submodules
 # How to update the repo with submodule
 
-# to refresh the submodules in nsp-code, from the parent directory (ecs-server) run:
+1) to refresh the submodules in nsp-code, from the parent directory (ecs-server) run:
+cd nsp-code
+
 cd ecs-server
+
 cd nsp-model
+
 git fetch
-git status
-git pull
-cd ..
-git status
-git add nsp-model
-git commit -m "Update to submodule 1"
-git push
+
 git status
 
+git pull
+
+cd ..
+
+git status
+
+git add nsp-model
+
+git commit -m "Update to submodule 1"
+
+git push
+
+git status

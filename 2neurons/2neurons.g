@@ -58,10 +58,22 @@ reset
 step $simulationTime$ -time
 paroff
 
-echo "statistics" > 2neurons.sts
-getstat -time -step -memory >> 2neurons.sts
-showstat >> 2neurons.sts
-showstat -element >> 2neurons.sts
-showstat -process >> 2neurons.sts
+
+if ({mynode}==1)
+echo "statistics" > $modName$-1.sts
+getstat -time -step -memory >> $modName$-1.sts
+showstat >> $modName$=1.sts
+showstat -element >> $modName$-1.sts
+showstat -process >> $modName$-1.sts
+end
+
+if ({mynode}==2)
+echo "statistics" > $modName$-2.sts
+getstat -time -step -memory >> $modName$-2.sts
+showstat >> $modName$-2.sts
+showstat -element >> $modName$-2.sts
+showstat -process >> $modName$-2.sts
+end
+
 
 exit
