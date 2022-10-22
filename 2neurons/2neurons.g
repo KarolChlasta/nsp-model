@@ -60,19 +60,19 @@ paroff
 
 
 if ({mynode}==1)
-echo "statistics" > $modName$-1.sts
-getstat -time -step -memory >> $modName$-1.sts
+echo "statistics 1"
+getstat -time -step -memory 
 showstat >> $modName$=1.sts
-showstat -element >> $modName$-1.sts
-showstat -process >> $modName$-1.sts
+showstat -element 
+showstat -process 
 end
 
 if ({mynode}==2)
-echo "statistics" > $modName$-2.sts
-getstat -time -step -memory >> $modName$-2.sts
-showstat >> $modName$-2.sts
-showstat -element >> $modName$-2.sts
-showstat -process >> $modName$-2.sts
+echo "statistics 2" 
+getstat -time -step -memory 
+showstat 
+showstat -element 
+showstat -process 
 end
 
 

@@ -112,8 +112,10 @@ make_synapse /input /retina_net_2_1/dend/Ex_channel 2 0
 
 step $simulationTime$ -time
 
-echo "statistics" > $modName$.sts
-getstat -time -step -memory >> $modName$.sts
-showstat >> $modName$.sts
-showstat -element >> $modName$.sts
-showstat -process >> $modName$.sts
+echo "statistics"
+getstat -time -step -memory
+showstat
+showstat -element
+showstat -process
+
+exit
