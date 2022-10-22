@@ -75,3 +75,72 @@ int i,j,k
 
 echo {net} spike activity saved to file {filename}.dat
 end
+
+function generate_pattern_RetNet40(code)
+  if ( {code} == 0 )
+    make_synapse /input /retina_net_1_1/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_1_2/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_1_3/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_1_4/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_1_5/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_1_6/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_1_7/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_1_8/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_2_8/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_3_8/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_4_8/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_5_8/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_5_7/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_5_6/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_5_5/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_5_4/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_5_3/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_5_2/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_5_1/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_4_1/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_3_1/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_2_1/dend/Ex_channel 2 0
+    echo Pattern 0
+  elif ( {code} == 1 )
+    make_synapse /input /retina_net_4_1/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_3_2/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_4_2/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_4_3/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_2_3/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_4_4/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_1_4/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_4_5/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_4_6/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_4_7/dend/Ex_channel 2 0
+    make_synapse /input /retina_net_4_8/dend/Ex_channel 2 0
+    echo Pattern 1
+  elif ( {code} == 2 )
+    echo Pattern 2
+  elif ( {code} == 3 )
+    echo Pattern 3
+  elif ( {code} == 4 )
+    echo Pattern 4
+  elif ( {code} == 5 )
+    echo Pattern 5
+  elif ( {code} == 6 )
+    echo Pattern 6
+  elif ( {code} == 7 )
+    echo Pattern 7
+  elif ( {code} == 8 )
+    echo Pattern 8
+  elif ( {code} == 9 )
+    echo Pattern 9
+  elif ( {code} == P )
+    echo Pattern P  
+  elif ( {code} == J )
+    echo Pattern J  
+  elif ( {code} == A )
+    echo Pattern A  
+  elif ( {code} == T )
+    echo Pattern T
+  elif ( {code} == K )
+    echo Pattern K
+  else
+    echo Unrecognized pattern
+  end
+end

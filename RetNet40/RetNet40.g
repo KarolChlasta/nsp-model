@@ -13,6 +13,7 @@
 // - Optional
 // $parallelMode
 // $numNodes
+// $modelInput
 
 float dt = $simulationTimeStepInSec$ // simulation time step in sec
 setclock  0  {dt}  // set the simulation clock
@@ -87,29 +88,9 @@ check
 reset
 
 // connecting impulses to stimulate retina
-make_synapse /input /retina_net_1_1/dend/Ex_channel 2 0
-make_synapse /input /retina_net_1_2/dend/Ex_channel 2 0
-make_synapse /input /retina_net_1_3/dend/Ex_channel 2 0
-make_synapse /input /retina_net_1_4/dend/Ex_channel 2 0
-make_synapse /input /retina_net_1_5/dend/Ex_channel 2 0
-make_synapse /input /retina_net_1_6/dend/Ex_channel 2 0
-make_synapse /input /retina_net_1_7/dend/Ex_channel 2 0
-make_synapse /input /retina_net_1_8/dend/Ex_channel 2 0
-make_synapse /input /retina_net_2_8/dend/Ex_channel 2 0
-make_synapse /input /retina_net_3_8/dend/Ex_channel 2 0
-make_synapse /input /retina_net_4_8/dend/Ex_channel 2 0
-make_synapse /input /retina_net_5_8/dend/Ex_channel 2 0
-make_synapse /input /retina_net_5_7/dend/Ex_channel 2 0
-make_synapse /input /retina_net_5_6/dend/Ex_channel 2 0
-make_synapse /input /retina_net_5_5/dend/Ex_channel 2 0
-make_synapse /input /retina_net_5_4/dend/Ex_channel 2 0
-make_synapse /input /retina_net_5_3/dend/Ex_channel 2 0
-make_synapse /input /retina_net_5_2/dend/Ex_channel 2 0
-make_synapse /input /retina_net_5_1/dend/Ex_channel 2 0
-make_synapse /input /retina_net_4_1/dend/Ex_channel 2 0
-make_synapse /input /retina_net_3_1/dend/Ex_channel 2 0
-make_synapse /input /retina_net_2_1/dend/Ex_channel 2 0
+generate_pattern_RetNet40($modelInput$)
 
+// start simulation
 step $simulationTime$ -time
 
 echo "statistics"
