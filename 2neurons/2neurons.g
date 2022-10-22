@@ -62,7 +62,7 @@ paroff
 if ({mynode}==1)
 echo "statistics 1"
 getstat -time -step -memory 
-showstat >> $modName$=1.sts
+showstat 
 showstat -element 
 showstat -process 
 end
