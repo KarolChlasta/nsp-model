@@ -2,12 +2,12 @@
 //
 // Parameters:
 // - Required
-// $modName$ default RetNet40
+// $modelName$ default RetNet40
 // $simulationTime$ default 1
 // $simulationTimeStepInSec$ default 0.00005
 // $columnDepth$ default 25 (1000 neurons)
 // $synapticProbability$ default 0.01
-// $modName$ default RetNet40
+// $modelName$ default RetNet40
 // $retX$ default 5
 // $retY$ default 8
 // - Optional
@@ -34,10 +34,10 @@ readcell cell.p /cell
 randseed
 
 make_circuit_2d /cell /retina_net $retX$ $retY$
-make_circuit_2d_output /retina_net $retX$ $retY$ $modName$-0-retina
+make_circuit_2d_output /retina_net $retX$ $retY$ $modelName$-0-retina
 
 make_circuit_3d /cell /column_net_1 $retX$ $retY$ $columnDepth$
-make_circuit_3d_output /column_net_1 $retX$ $retY$ $columnDepth$ $modName$-0-column
+make_circuit_3d_output /column_net_1 $retX$ $retY$ $columnDepth$ $modelName$-0-column
 
 int i1,j1,k1,i2,j2,k2,ri,rj
 
