@@ -13,6 +13,7 @@
 // - Optional
 // $parallelMode
 // $numNodes
+// $modelInput
 
 float dt = $simulationTimeStepInSec$ // simulation time step in sec
 setclock  0  {dt}  // set the simulation clock
@@ -87,7 +88,9 @@ check
 reset
 
 // connecting impulses to stimulate retina
+generate_pattern_RetNet40($modelInput$)
 
+// start simulation
 step $simulationTime$ -time
 
 echo "statistics"
