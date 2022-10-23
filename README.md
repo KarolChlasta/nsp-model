@@ -1,7 +1,8 @@
-# nsp-model
-Models used in Neural Simulation Pipeline
+nsp-model
+=========
+Cybernetic models used in Neural Simulation Pipeline evaluation
 
-# How to clone model repository with this git module
+# How to clone this model repository with this git submodule
 git clone https://github.com/KarolChlasta/nsp-code.git --recurse-submodules
 
 # Command how to add submodule manually
@@ -14,7 +15,7 @@ git pull --recurse-submodules
 # How to update the repo with submodule
 
 1) to refresh the submodules in nsp-code, from the parent directory (ecs-server) run:
-````
+```
 cd nsp-code
 cd ecs-server
 
