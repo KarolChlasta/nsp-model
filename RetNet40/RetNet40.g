@@ -113,47 +113,8 @@ reset
     make_synapse /input /retina_net_3_1/dend/Ex_channel 2 0
     make_synapse /input /retina_net_2_1/dend/Ex_channel 2 0
     echo Pattern 0
-  elif ( $modelInput$ == 1 )
-    make_synapse /input /retina_net_4_1/dend/Ex_channel 2 0
-    make_synapse /input /retina_net_3_2/dend/Ex_channel 2 0
-    make_synapse /input /retina_net_4_2/dend/Ex_channel 2 0
-    make_synapse /input /retina_net_4_3/dend/Ex_channel 2 0
-    make_synapse /input /retina_net_2_3/dend/Ex_channel 2 0
-    make_synapse /input /retina_net_4_4/dend/Ex_channel 2 0
-    make_synapse /input /retina_net_1_4/dend/Ex_channel 2 0
-    make_synapse /input /retina_net_4_5/dend/Ex_channel 2 0
-    make_synapse /input /retina_net_4_6/dend/Ex_channel 2 0
-    make_synapse /input /retina_net_4_7/dend/Ex_channel 2 0
-    make_synapse /input /retina_net_4_8/dend/Ex_channel 2 0
-    echo Pattern 1
-  elif ( $modelInput$ == 2 )
-    echo Pattern 2
-  elif ( $modelInput$ == 3 )
-    echo Pattern 3
-  elif ( $modelInput$ == 4 )
-    echo Pattern 4
-  elif ( $modelInput$ == 5 )
-    echo Pattern 5
-  elif ( $modelInput$ == 6 )
-    echo Pattern 6
-  elif ( $modelInput$ == 7 )
-    echo Pattern 7
-  elif ( $modelInput$ == 8 )
-    echo Pattern 8
-  elif ( $modelInput$ == 9 )
-    echo Pattern 9
-  elif ( $modelInput$ == P )
-    echo Pattern P  
-  elif ( $modelInput$ == J )
-    echo Pattern J  
-  elif ( $modelInput$ == A )
-    echo Pattern A  
-  elif ( $modelInput$ == T )
-    echo Pattern T
-  elif ( $modelInput$ == K )
-    echo Pattern K
-  else
-    echo Unrecognized pattern
+    else
+      echo Unrecognized pattern
   end
 
 // start simulation
