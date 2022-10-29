@@ -34,10 +34,10 @@ readcell cell.p /cell
 randseed
 
 make_circuit_2d /cell /retina_net $retX$ $retY$
-make_circuit_2d_output /retina_net $retX$ $retY$ $modelName$-0-retina
+make_circuit_2d_output /retina_net $retX$ $retY$ $modelName$-$modelInput$-retina
 
 make_circuit_3d /cell /column_net_1 $retX$ $retY$ $columnDepth$
-make_circuit_3d_output /column_net_1 $retX$ $retY$ $columnDepth$ $modelName$-0-column
+make_circuit_3d_output /column_net_1 $retX$ $retY$ $columnDepth$ $modelName$-$modelInput$-column
 
 int i1,j1,k1,i2,j2,k2,ri,rj
 
