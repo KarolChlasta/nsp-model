@@ -272,7 +272,7 @@ elif ( $modelInput$ == 9 )
   make_synapse /input /retina_net_3_8/dend/Ex_channel 2 0
   make_synapse /input /retina_net_4_8/dend/Ex_channel 2 0
   echo Pattern 9
-elif ( $modelInput$ == "P" )
+elif ( $modelInput$ == 10 ) //P
   make_synapse /input /retina_net_1_1/dend/Ex_channel 2 0
   make_synapse /input /retina_net_2_1/dend/Ex_channel 2 0
   make_synapse /input /retina_net_3_1/dend/Ex_channel 2 0
@@ -291,7 +291,7 @@ elif ( $modelInput$ == "P" )
   make_synapse /input /retina_net_1_7/dend/Ex_channel 2 0
   make_synapse /input /retina_net_1_8/dend/Ex_channel 2 0
   echo Pattern P
-elif ( $modelInput$ == "J" )
+elif ( $modelInput$ == 11 ) //J
   make_synapse /input /retina_net_1_1/dend/Ex_channel 2 0
   make_synapse /input /retina_net_2_1/dend/Ex_channel 2 0
   make_synapse /input /retina_net_3_1/dend/Ex_channel 2 0
@@ -306,7 +306,7 @@ elif ( $modelInput$ == "J" )
   make_synapse /input /retina_net_2_8/dend/Ex_channel 2 0
   make_synapse /input /retina_net_1_7/dend/Ex_channel 2 0
   echo Pattern J
-elif ( $modelInput$ == "A" )
+elif ( $modelInput$ == 12 ) //A
   make_synapse /input /retina_net_2_1/dend/Ex_channel 2 0
   make_synapse /input /retina_net_3_1/dend/Ex_channel 2 0
   make_synapse /input /retina_net_4_1/dend/Ex_channel 2 0
@@ -328,7 +328,7 @@ elif ( $modelInput$ == "A" )
   make_synapse /input /retina_net_5_8/dend/Ex_channel 2 0
   make_synapse /input /retina_net_1_8/dend/Ex_channel 2 0
   echo Pattern A
-elif ( $modelInput$ == "T" )
+elif ( $modelInput$ == 13 ) //T
   make_synapse /input /retina_net_1_1/dend/Ex_channel 2 0
   make_synapse /input /retina_net_2_1/dend/Ex_channel 2 0
   make_synapse /input /retina_net_3_1/dend/Ex_channel 2 0
@@ -342,7 +342,7 @@ elif ( $modelInput$ == "T" )
   make_synapse /input /retina_net_3_7/dend/Ex_channel 2 0
   make_synapse /input /retina_net_3_8/dend/Ex_channel 2 0
   echo Pattern T
-elif ( $modelInput$ == "K" )
+elif ( $modelInput$ == 14 ) //K
   make_synapse /input /retina_net_1_1/dend/Ex_channel 2 0
   make_synapse /input /retina_net_5_1/dend/Ex_channel 2 0
   make_synapse /input /retina_net_1_2/dend/Ex_channel 2 0
