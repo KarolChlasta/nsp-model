@@ -1,6 +1,6 @@
 paron -parallel -nodes 3
 int NodesNumber = 3
-setclock 0 0.0001
+setclock 0 $simulationTimeStepInSec$
 
 include functions
 include pfunctions
