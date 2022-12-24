@@ -1,3 +1,3 @@
 nsp-model
 =========
-Cybernetic models used in Neural Simulation Pipeline
+Cybernetic models used by Neural Simulation Pipeline
