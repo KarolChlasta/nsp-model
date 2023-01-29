@@ -3,8 +3,8 @@
 // Parameters:
 // - Required
 // $modelName$ default RetNet40
-// $simulationTime$ default 1
-// $simulationTimeStepInSec$ default 0.00005
+// $simTime$ default 1
+// $simTimeStepInSec$ default 0.00005
 // $columnDepth$ default 25 (1000 neurons)
 // $synapticProbability$ default 0.01
 // $modelName$ default RetNet40
@@ -15,7 +15,7 @@
 // $numNodes
 // $modelInput
 
-float dt = $simulationTimeStepInSec$ // simulation time step in sec
+float dt = $simTimeStepInSec$ // simulation time step in sec
 setclock  0  {dt}  // set the simulation clock
 
 int array_minx =  1     // the smallest index x
@@ -365,7 +365,7 @@ else
 end
 
 // start simulation
-step $simulationTime$ -time
+step $simTime$ -time
 
 echo "statistics"
 getstat -time -step -memory
