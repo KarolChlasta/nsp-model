@@ -1,4 +1,4 @@
-float dt = $simTimeStepInSec$ // simulation time step in sec i.e 0.00005
+float dt = $simulationTimeStepInSec$ // simulation time step in sec i.e 0.00005
 setclock  0  {dt}  // set the simulation clock
 
 int array_minx =  1     // najmniejszy indeks x
@@ -134,78 +134,83 @@ reset
 check
 
 // podłączenie generatora impulsów do kanałów wzbudzających siatkówki
-make_synapse /input /retina_net_8_4/dend/Ex_channel 2 0
-make_synapse /input /retina_net_8_5/dend/Ex_channel 2 0
-make_synapse /input /retina_net_8_6/dend/Ex_channel 2 0
-make_synapse /input /retina_net_8_7/dend/Ex_channel 2 0
+make_synapse /input /retina_net_2_12/dend/Ex_channel 2 0
+make_synapse /input /retina_net_2_13/dend/Ex_channel 2 0
+make_synapse /input /retina_net_2_14/dend/Ex_channel 2 0
+make_synapse /input /retina_net_2_15/dend/Ex_channel 2 0
+make_synapse /input /retina_net_2_16/dend/Ex_channel 2 0
+make_synapse /input /retina_net_2_17/dend/Ex_channel 2 0
+make_synapse /input /retina_net_3_11/dend/Ex_channel 2 0
+make_synapse /input /retina_net_3_12/dend/Ex_channel 2 0
+make_synapse /input /retina_net_3_17/dend/Ex_channel 2 0
+make_synapse /input /retina_net_3_18/dend/Ex_channel 2 0
+make_synapse /input /retina_net_4_10/dend/Ex_channel 2 0
+make_synapse /input /retina_net_4_11/dend/Ex_channel 2 0
+make_synapse /input /retina_net_4_18/dend/Ex_channel 2 0
+make_synapse /input /retina_net_4_19/dend/Ex_channel 2 0
+make_synapse /input /retina_net_5_9/dend/Ex_channel 2 0
+make_synapse /input /retina_net_5_10/dend/Ex_channel 2 0
+make_synapse /input /retina_net_5_19/dend/Ex_channel 2 0
+make_synapse /input /retina_net_5_20/dend/Ex_channel 2 0
+make_synapse /input /retina_net_6_8/dend/Ex_channel 2 0
+make_synapse /input /retina_net_6_9/dend/Ex_channel 2 0
+make_synapse /input /retina_net_6_20/dend/Ex_channel 2 0
+make_synapse /input /retina_net_6_21/dend/Ex_channel 2 0
+make_synapse /input /retina_net_7_8/dend/Ex_channel 2 0
+make_synapse /input /retina_net_7_21/dend/Ex_channel 2 0
 make_synapse /input /retina_net_8_8/dend/Ex_channel 2 0
-make_synapse /input /retina_net_8_9/dend/Ex_channel 2 0
-make_synapse /input /retina_net_8_10/dend/Ex_channel 2 0
-make_synapse /input /retina_net_8_11/dend/Ex_channel 2 0
-make_synapse /input /retina_net_8_12/dend/Ex_channel 2 0
-make_synapse /input /retina_net_8_13/dend/Ex_channel 2 0
-make_synapse /input /retina_net_8_14/dend/Ex_channel 2 0
-make_synapse /input /retina_net_8_15/dend/Ex_channel 2 0
-make_synapse /input /retina_net_8_16/dend/Ex_channel 2 0
-make_synapse /input /retina_net_8_17/dend/Ex_channel 2 0
-make_synapse /input /retina_net_8_18/dend/Ex_channel 2 0
-make_synapse /input /retina_net_8_19/dend/Ex_channel 2 0
-make_synapse /input /retina_net_8_20/dend/Ex_channel 2 0
 make_synapse /input /retina_net_8_21/dend/Ex_channel 2 0
-make_synapse /input /retina_net_8_22/dend/Ex_channel 2 0
-make_synapse /input /retina_net_8_23/dend/Ex_channel 2 0
-make_synapse /input /retina_net_8_24/dend/Ex_channel 2 0
-make_synapse /input /retina_net_8_25/dend/Ex_channel 2 0
-make_synapse /input /retina_net_9_3/dend/Ex_channel 2 0
-make_synapse /input /retina_net_10_3/dend/Ex_channel 2 0
-make_synapse /input /retina_net_11_3/dend/Ex_channel 2 0
-make_synapse /input /retina_net_12_3/dend/Ex_channel 2 0
-make_synapse /input /retina_net_13_3/dend/Ex_channel 2 0
-make_synapse /input /retina_net_14_3/dend/Ex_channel 2 0
-make_synapse /input /retina_net_15_3/dend/Ex_channel 2 0
-make_synapse /input /retina_net_16_3/dend/Ex_channel 2 0
-make_synapse /input /retina_net_17_3/dend/Ex_channel 2 0
-make_synapse /input /retina_net_18_3/dend/Ex_channel 2 0
-make_synapse /input /retina_net_19_3/dend/Ex_channel 2 0
-make_synapse /input /retina_net_20_3/dend/Ex_channel 2 0
-make_synapse /input /retina_net_9_26/dend/Ex_channel 2 0
-make_synapse /input /retina_net_10_26/dend/Ex_channel 2 0
-make_synapse /input /retina_net_11_26/dend/Ex_channel 2 0
-make_synapse /input /retina_net_12_26/dend/Ex_channel 2 0
-make_synapse /input /retina_net_13_26/dend/Ex_channel 2 0
-make_synapse /input /retina_net_14_26/dend/Ex_channel 2 0
-make_synapse /input /retina_net_15_26/dend/Ex_channel 2 0
-make_synapse /input /retina_net_16_26/dend/Ex_channel 2 0
-make_synapse /input /retina_net_17_26/dend/Ex_channel 2 0
-make_synapse /input /retina_net_18_26/dend/Ex_channel 2 0
-make_synapse /input /retina_net_19_26/dend/Ex_channel 2 0
-make_synapse /input /retina_net_20_26/dend/Ex_channel 2 0
-make_synapse /input /retina_net_21_4/dend/Ex_channel 2 0
-make_synapse /input /retina_net_21_5/dend/Ex_channel 2 0
-make_synapse /input /retina_net_21_6/dend/Ex_channel 2 0
-make_synapse /input /retina_net_21_7/dend/Ex_channel 2 0
+make_synapse /input /retina_net_9_8/dend/Ex_channel 2 0
+make_synapse /input /retina_net_9_21/dend/Ex_channel 2 0
+make_synapse /input /retina_net_10_8/dend/Ex_channel 2 0
+make_synapse /input /retina_net_10_21/dend/Ex_channel 2 0
+make_synapse /input /retina_net_11_8/dend/Ex_channel 2 0
+make_synapse /input /retina_net_11_21/dend/Ex_channel 2 0
+make_synapse /input /retina_net_12_8/dend/Ex_channel 2 0
+make_synapse /input /retina_net_12_21/dend/Ex_channel 2 0
+make_synapse /input /retina_net_13_8/dend/Ex_channel 2 0
+make_synapse /input /retina_net_13_21/dend/Ex_channel 2 0
+make_synapse /input /retina_net_14_8/dend/Ex_channel 2 0
+make_synapse /input /retina_net_14_21/dend/Ex_channel 2 0
+make_synapse /input /retina_net_15_8/dend/Ex_channel 2 0
+make_synapse /input /retina_net_15_21/dend/Ex_channel 2 0
+make_synapse /input /retina_net_16_8/dend/Ex_channel 2 0
+make_synapse /input /retina_net_16_21/dend/Ex_channel 2 0
+make_synapse /input /retina_net_17_8/dend/Ex_channel 2 0
+make_synapse /input /retina_net_17_21/dend/Ex_channel 2 0
+make_synapse /input /retina_net_18_8/dend/Ex_channel 2 0
+make_synapse /input /retina_net_18_21/dend/Ex_channel 2 0
+make_synapse /input /retina_net_19_8/dend/Ex_channel 2 0
+make_synapse /input /retina_net_19_21/dend/Ex_channel 2 0
+make_synapse /input /retina_net_20_8/dend/Ex_channel 2 0
+make_synapse /input /retina_net_20_21/dend/Ex_channel 2 0
 make_synapse /input /retina_net_21_8/dend/Ex_channel 2 0
-make_synapse /input /retina_net_21_9/dend/Ex_channel 2 0
-make_synapse /input /retina_net_21_10/dend/Ex_channel 2 0
-make_synapse /input /retina_net_21_11/dend/Ex_channel 2 0
-make_synapse /input /retina_net_21_12/dend/Ex_channel 2 0
-make_synapse /input /retina_net_21_13/dend/Ex_channel 2 0
-make_synapse /input /retina_net_21_14/dend/Ex_channel 2 0
-make_synapse /input /retina_net_21_15/dend/Ex_channel 2 0
-make_synapse /input /retina_net_21_16/dend/Ex_channel 2 0
-make_synapse /input /retina_net_21_17/dend/Ex_channel 2 0
-make_synapse /input /retina_net_21_18/dend/Ex_channel 2 0
-make_synapse /input /retina_net_21_19/dend/Ex_channel 2 0
-make_synapse /input /retina_net_21_20/dend/Ex_channel 2 0
 make_synapse /input /retina_net_21_21/dend/Ex_channel 2 0
-make_synapse /input /retina_net_21_22/dend/Ex_channel 2 0
-make_synapse /input /retina_net_21_23/dend/Ex_channel 2 0
-make_synapse /input /retina_net_21_24/dend/Ex_channel 2 0
-make_synapse /input /retina_net_21_25/dend/Ex_channel 2 0
-
-step $simTime$ -time
-echo "statistics" 
-getstat -time -step -memory 
-showstat 
-showstat -element 
-showstat -process 
+make_synapse /input /retina_net_22_8/dend/Ex_channel 2 0
+make_synapse /input /retina_net_22_9/dend/Ex_channel 2 0
+make_synapse /input /retina_net_22_20/dend/Ex_channel 2 0
+make_synapse /input /retina_net_22_21/dend/Ex_channel 2 0
+make_synapse /input /retina_net_23_9/dend/Ex_channel 2 0
+make_synapse /input /retina_net_23_10/dend/Ex_channel 2 0
+make_synapse /input /retina_net_23_19/dend/Ex_channel 2 0
+make_synapse /input /retina_net_23_20/dend/Ex_channel 2 0
+make_synapse /input /retina_net_24_10/dend/Ex_channel 2 0
+make_synapse /input /retina_net_24_11/dend/Ex_channel 2 0
+make_synapse /input /retina_net_24_18/dend/Ex_channel 2 0
+make_synapse /input /retina_net_24_19/dend/Ex_channel 2 0
+make_synapse /input /retina_net_25_11/dend/Ex_channel 2 0
+make_synapse /input /retina_net_25_12/dend/Ex_channel 2 0
+make_synapse /input /retina_net_25_17/dend/Ex_channel 2 0
+make_synapse /input /retina_net_25_18/dend/Ex_channel 2 0
+make_synapse /input /retina_net_26_12/dend/Ex_channel 2 0
+make_synapse /input /retina_net_26_13/dend/Ex_channel 2 0
+make_synapse /input /retina_net_26_14/dend/Ex_channel 2 0
+make_synapse /input /retina_net_26_15/dend/Ex_channel 2 0
+make_synapse /input /retina_net_26_16/dend/Ex_channel 2 0
+make_synapse /input /retina_net_26_17/dend/Ex_channel 2 0
+step $simulationTime$ -time
+echo "statistics" > RetNet784.sts
+getstat -time -step -memory >> RetNet784.sts
+showstat >> RetNet784.sts
+showstat -element >> RetNet784.sts
+showstat -process >> RetNet784.sts
