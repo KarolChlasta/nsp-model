@@ -1,4 +1,4 @@
-float dt = $simulationTimeStepInSec$ // simulation time step in sec i.e 0.00005
+float dt = $simTimeStepInSec$ // simulation time step in sec i.e 0.00005
 setclock  0  {dt}  // set the simulation clock
 
 int array_minx =  1     // najmniejszy indeks x
@@ -203,9 +203,9 @@ make_synapse /input /retina_net_21_23/dend/Ex_channel 2 0
 make_synapse /input /retina_net_21_24/dend/Ex_channel 2 0
 make_synapse /input /retina_net_21_25/dend/Ex_channel 2 0
 
-step $simulationTime$ -time
-echo "statistics" > RetNet784.sts
-getstat -time -step -memory >> RetNet784.sts
-showstat >> RetNet784.sts
-showstat -element >> RetNet784.sts
-showstat -process >> RetNet784.sts
+step $simTime$ -time
+echo "statistics" 
+getstat -time -step -memory 
+showstat 
+showstat -element 
+showstat -process 

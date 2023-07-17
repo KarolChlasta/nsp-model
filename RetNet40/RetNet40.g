@@ -3,8 +3,8 @@
 // Parameters:
 // - Required
 // $modelName$ default RetNet40
-// $simulationTime$ default 1
-// $simulationTimeStepInSec$ default 0.00005
+// $simTime$ default 1
+// $simTimeStepInSec$ default 0.00005
 // $columnDepth$ default 25 (1000 neurons)
 // $synapticProbability$ default 0.01
 // $modelName$ default RetNet40
@@ -15,7 +15,7 @@
 // $numNodes
 // $modelInput
 
-float dt = $simulationTimeStepInSec$ // simulation time step in sec
+float dt = $simTimeStepInSec$ // simulation time step in sec
 setclock  0  {dt}  // set the simulation clock
 
 int array_minx =  1     // the smallest index x
@@ -34,10 +34,10 @@ readcell cell.p /cell
 randseed
 
 make_circuit_2d /cell /retina_net $retX$ $retY$
-make_circuit_2d_output /retina_net $retX$ $retY$ $modelName$-0-retina
+make_circuit_2d_output /retina_net $retX$ $retY$ $modelName$-$modelInput$-retina
 
 make_circuit_3d /cell /column_net_1 $retX$ $retY$ $columnDepth$
-make_circuit_3d_output /column_net_1 $retX$ $retY$ $columnDepth$ $modelName$-0-column
+make_circuit_3d_output /column_net_1 $retX$ $retY$ $columnDepth$ $modelName$-$modelInput$-column
 
 int i1,j1,k1,i2,j2,k2,ri,rj
 
@@ -272,7 +272,7 @@ elif ( $modelInput$ == 9 )
   make_synapse /input /retina_net_3_8/dend/Ex_channel 2 0
   make_synapse /input /retina_net_4_8/dend/Ex_channel 2 0
   echo Pattern 9
-elif ( $modelInput$ == P )
+elif ( $modelInput$ == 10 ) //P
   make_synapse /input /retina_net_1_1/dend/Ex_channel 2 0
   make_synapse /input /retina_net_2_1/dend/Ex_channel 2 0
   make_synapse /input /retina_net_3_1/dend/Ex_channel 2 0
@@ -291,7 +291,7 @@ elif ( $modelInput$ == P )
   make_synapse /input /retina_net_1_7/dend/Ex_channel 2 0
   make_synapse /input /retina_net_1_8/dend/Ex_channel 2 0
   echo Pattern P
-elif ( $modelInput$ == J )
+elif ( $modelInput$ == 11 ) //J
   make_synapse /input /retina_net_1_1/dend/Ex_channel 2 0
   make_synapse /input /retina_net_2_1/dend/Ex_channel 2 0
   make_synapse /input /retina_net_3_1/dend/Ex_channel 2 0
@@ -306,7 +306,7 @@ elif ( $modelInput$ == J )
   make_synapse /input /retina_net_2_8/dend/Ex_channel 2 0
   make_synapse /input /retina_net_1_7/dend/Ex_channel 2 0
   echo Pattern J
-elif ( $modelInput$ == A )
+elif ( $modelInput$ == 12 ) //A
   make_synapse /input /retina_net_2_1/dend/Ex_channel 2 0
   make_synapse /input /retina_net_3_1/dend/Ex_channel 2 0
   make_synapse /input /retina_net_4_1/dend/Ex_channel 2 0
@@ -328,7 +328,7 @@ elif ( $modelInput$ == A )
   make_synapse /input /retina_net_5_8/dend/Ex_channel 2 0
   make_synapse /input /retina_net_1_8/dend/Ex_channel 2 0
   echo Pattern A
-elif ( $modelInput$ == T )
+elif ( $modelInput$ == 13 ) //T
   make_synapse /input /retina_net_1_1/dend/Ex_channel 2 0
   make_synapse /input /retina_net_2_1/dend/Ex_channel 2 0
   make_synapse /input /retina_net_3_1/dend/Ex_channel 2 0
@@ -342,7 +342,7 @@ elif ( $modelInput$ == T )
   make_synapse /input /retina_net_3_7/dend/Ex_channel 2 0
   make_synapse /input /retina_net_3_8/dend/Ex_channel 2 0
   echo Pattern T
-elif ( $modelInput$ == K )
+elif ( $modelInput$ == 14 ) //K
   make_synapse /input /retina_net_1_1/dend/Ex_channel 2 0
   make_synapse /input /retina_net_5_1/dend/Ex_channel 2 0
   make_synapse /input /retina_net_1_2/dend/Ex_channel 2 0
@@ -365,7 +365,7 @@ else
 end
 
 // start simulation
-step $simulationTime$ -time
+step $simTime$ -time
 
 echo "statistics"
 getstat -time -step -memory

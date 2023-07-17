@@ -1,6 +1,6 @@
 paron -parallel -nodes 3
 int NodesNumber = 3
-setclock 0 0.0001
+setclock 0 $simTimeStepInSec$
 
 include functions
 include pfunctions
@@ -55,7 +55,7 @@ end
 barrier
 
 reset
-step $simulationTime$ -time
+step $simTime$ -time
 paroff
 
 
